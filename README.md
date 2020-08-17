@@ -26,11 +26,25 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+When using sessions for authentication, the server stores the users session data using cookies. When a user attempts an action that requires authentication, the session id that is stored on the users browser cookie is compared with the session id that is on the server in order to verify that the user is authorized.
+
+When using JSON Web Tokens, the user data is stored in a token that is divided into three pieces, the header, payload and secret. This information is checked by the authorization header in order to validate that the user has access.
+
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+Bcrypt uses an algorithm to create a hash version of a password. The original password is hashed and combined with an additional salt string which adds an extra layer of security and making it very hard for hackers to decrypt a password using a rainbow table.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+Unit tests are used to verify that individual, isolated parts of the app work as expected. Integration tests verify that several units work together in harmony. End to end testing involves the utilization of a helper robot that behaves like a user to click around the app to verify that it functions correctly.
+
+
+Unit tests are only used to test a small part of the application. Integration tests are used to ensure that more that one piece of the application works correctly. End to end testing tests the entire application to ensure that nothing is broken.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+Test driven development changes the way we write applications and tests because we write the tests first and then write the code that passes the tests after. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
